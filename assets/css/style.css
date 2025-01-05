@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #181818;
+}
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    /*UNIDADE DE MEDIDA RELATIVA AO TAMANHO DA "font-size" DO ELEMENTO RAIZ DA PÁGINA (<html> | 1rem = 16px, 2rem = 32px...)*/
+    padding: 2rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+a {
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+/*ADICIONANDO UMA LINHA INVISÍVEL A CADA LINK QUE IRÁ APARECER COM O PASSAR DO MOUSE*/
+.link a::after {
+    content: "";/*ADICIONA ALGO DEPOIS DO TEXTO DO link*/
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+.link a:hover::after {
+    width: 70%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: #1e40af;
+}
