@@ -157,3 +157,15 @@ footer .socials a{
 footer .socials a:hover {
     color: #0077b5;
 }
+
+@media (width < 900px) {
+    .nav-links {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+    }
+}
