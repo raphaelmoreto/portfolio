@@ -23,6 +23,14 @@ nav {
     justify-content: space-between;
     gap: 2rem;
 }
+img {
+    width: 100%;
+    display: flex;
+    border-radius: 50%;
+}
+.nav-foto {
+    max-width: 100px;
+}
 a {
     text-decoration: none;
 }
@@ -54,6 +62,13 @@ a {
 }
 
 .btn {
+    background-color: #fff;
+    padding: 0.50rem 2rem;
+    font-size: 1rem;
+    color: #181818;
+    border-radius: 5px;
+}
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -64,4 +79,63 @@ a {
 }
 .btn:hover {
     background-color: #1e40af;
+}
+.btn:active {
+    box-shadow: inset -4px 4px 0 #1d4ed8;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+
+    /*CONFIGURA A "grid" PARA TER 2 COLUNAS, CADA UMA COM A LARGURA PROPORCIONAL DE 1fr (UMA FRAÇÃO DE ESPAÇO DISPONÍVEL)*/
+    grid-template-columns: repeat(2, 1fr);
+
+    align-items: center;
+    gap: 2rem;/*ESPAÇAMENTO DAS DUAS COLUNAS DA grid*/
+}
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+header .content h1 span {
+    -webkit-text-fill-color: transparent;/*PREENCHE A COR DO TEXTO SENDO TRANSPARENTE*/
+    -webkit-text-stroke: 1px #fff;/*APLICA UM CONTORNO DE 1px COM A COR BRANCA NO TEXTO*/
+}
+header .content p {
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+header .image {
+    position: relative;
+}
+header .image::before {
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+header .image img {
+    max-width: 600px;
+    margin: auto;
 }
